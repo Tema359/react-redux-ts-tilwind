@@ -37,7 +37,7 @@ export default function MainPage() {
         <AirportCard key={airport.id} airport={airport} />
       ))}
 
-      <ReactPaginate
+      { pageCount && <ReactPaginate
         breakLabel="..."
         nextLabel=">"
         previousLabel="<"
@@ -45,12 +45,12 @@ export default function MainPage() {
         onPageChange={pageChangeHandler}
         pageRangeDisplayed={3}
         pageCount={pageCount}
-        containerClassName='flex items-center'
+        containerClassName='flex items-center my-6'
         pageClassName='py-1 px-2 border mr-2'
         previousClassName='py-1 px-2 border mr-2'
         nextClassName='py-1 px-2 border'
         activeClassName='bg-blue-400 text-white'
-      />
+      />}
 
     </div>
   )
